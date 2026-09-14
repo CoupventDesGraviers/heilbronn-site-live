@@ -1,5 +1,5 @@
 {
- "ref": "heilbronn-site structured search (overnight 2026-09-13): delete points 21,24 from n=28, seeded from the triangle n=28 record",
- "credit": "Tej Stead, September 2026",
- "note": "Found by delete points 21,24 from n=28 applied to the triangle n=28 record (Rhys Chappell, September 2026), then re-polished to convergence; 47 tied minimal triples. Improves the previous value by 0.078%."
+ "ref": "Heilbronn triangle toolkit (search_hop_tri.py): full-dimension basin hopping on subsets of points, chains seeded by one-point deletions of our D3-symmetric n=27 configuration, with elite restarts from distinct optima; refined to 120 digits by Gauss-Newton",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "No symmetry; two points on each side, no vertex; 47 minimal triangles, rigid (Jacobian of full rank 47 after pinning the six boundary coordinates)"
 }
