@@ -1,5 +1,5 @@
 {
- "ref": "AlphaEvolve Early Access experiment, run 2026-05-13; re-polished in heilbronn-site (search/refine.py)",
- "credit": "Ilkyoo Choi, May 2026",
- "note": "Coordinates generated during Ilkyoo Choi's AlphaEvolve experiment, re-polished to convergence by the site maintainer: 0.0038054969 against 0.0038051247 for the submitted coordinates (+0.0098%), 67 tied minimal triples (submitted: 21)."
+ "ref": "Heilbronn toolkit, D4 multistart over a C-kernel orbit-reduced triangle evaluator (decomposition libre^4 + adiag, dimension 9), 4.6e7 restarts; refined to 600 digits by Gauss-Newton in the symmetry-reduced space",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "D4 symmetric, eight boundary points (two per side); 72 critical triangles for 64 degrees of freedom, so the configuration is rigid"
 }
