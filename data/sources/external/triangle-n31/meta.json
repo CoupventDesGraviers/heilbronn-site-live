@@ -1,5 +1,5 @@
 {
- "ref": "autoheilbronn v4 topology/annealing campaign; exact rational verification",
- "credit": "Rhys Chappell, September 2026",
- "note": "Line-arrangement-guided insertion and stress-weighted ruin/recreate, followed by filtered trust-region SLP polishing; GPU annealing was also used where recorded in the result provenance."
+ "ref": "Heilbronn triangle toolkit, D3-symmetric multistart + orbit-subset basin hopping over a C-kernel orbit-reduced evaluator (orbit decomposition free^5 + centroid, dimension 10); refined to 120 digits by Gauss-Newton in the symmetry-reduced space",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "D3 symmetric, two points on each side, no vertex; 57 minimal triangles, rigid in the symmetry-reduced space (Jacobian of full rank 10)"
 }

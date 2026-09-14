@@ -1,5 +1,5 @@
 {
- "ref": "autoheilbronn v6 campaign; two independent exact rational verifiers",
- "credit": "Rhys Chappell, September 2026",
- "note": "Coordinated changes of triangle orientations, followed by trust-region linear programming."
+ "ref": "Heilbronn triangle toolkit, D3-symmetric multistart + orbit-subset basin hopping over a C-kernel orbit-reduced evaluator (orbit decomposition free^4 + median + centroid, dimension 9); refined to 120 digits by Gauss-Newton in the symmetry-reduced space",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "D3 symmetric, two points on each side, no vertex; 51 minimal triangles, rigid in the symmetry-reduced space (Jacobian of full rank 9)"
 }

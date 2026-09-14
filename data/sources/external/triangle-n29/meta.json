@@ -1,5 +1,5 @@
 {
- "ref": "autoheilbronn v4 topology/annealing campaign; exact rational verification",
- "credit": "Rhys Chappell, September 2026",
- "note": "Line-arrangement-guided insertion and stress-weighted ruin/recreate, followed by filtered trust-region SLP polishing; GPU annealing was also used where recorded in the result provenance."
+ "ref": "Heilbronn triangle toolkit: derived from the D3-symmetric n=30 configuration by deleting one point, then epigraph SLSQP polishing in full dimension; refined to 120 digits by damped Gauss-Newton",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "No exact symmetry (one point removed from the D3 n=30 configuration, then polished; approximately mirror symmetric); two points on each side; 52 minimal triangles for 58 coordinates, not rigid (2 free directions), so likely improvable"
 }
