@@ -20,6 +20,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write  # to dispatch publish-site after a merge
 
 jobs:
   merge:
@@ -88,4 +89,9 @@ jobs:
 
             gh pr merge --squash "$pr" --repo "$REPO"
             echo "PR #$pr merged"
+            # A merge by the Actions token emits no push event that triggers
+            # workflows, and the publish-site cron is unreliable, so dispatch
+            # the publish explicitly (workflow_dispatch is exempt from the
+            # GITHUB_TOKEN no-retrigger rule).
+            gh workflow run publish-site --repo "$REPO" || echo "::warning::publish-site dispatch failed; the cron will catch it"
           done
