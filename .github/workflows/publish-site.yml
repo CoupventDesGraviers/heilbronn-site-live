@@ -11,6 +11,8 @@ on:
   # Auto-merged PRs (merged by the Actions token) do not emit push events
   # that trigger workflows, so a schedule catches them: the cheap check job
   # compares HEAD against the published build and skips when nothing changed.
+  # Note: GitHub registers this schedule only when this file changes on main;
+  # after a repo recreate, touch this file or the cron never fires.
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
