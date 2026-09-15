@@ -8,8 +8,9 @@ one-parameter slice of it) has an exact closed form derived on this site:
                 t in [0, 1/2]; a shear is area-preserving, so every
                 triangle's area is invariant. t = 1/2 is the 90-degree
                 rotation image of t = 0. (Dress-Yang-Zeng family.)
-  triangle n=5  p1 slides along the bottom edge: (x, 0),
-                x in [2-sqrt(2), 1/sqrt(2)]  (right frame).
+  triangle n=5  p1 slides along the hypotenuse: (1-x, x),
+                x in [2-sqrt(2), 1/sqrt(2)]  (right frame, mirror
+                oriented vertically as ingest stores it).
   triangle n=6  p2 slides along the left edge: (0, y), y in [1/4, 3/8].
   convex n=7    center + two equilateral orbits 30 degrees apart, radius
                 ratio s in [sqrt(3)/2, 2/sqrt(3)]; samples rescaled so the
@@ -82,8 +83,12 @@ def _tri5_family():
     s2 = sp.sqrt(2)
     lo, hi = 2 - s2, 1 / s2
     xs = [lo + sp.Rational(k, 16) * (hi - lo) for k in range(17)]
-    samples = [[(sp.S(0), sp.S(0)), (x, sp.S(0)), (sp.S(0), sp.S(1)),
-                (2 - s2, s2 - 1), (3 - 2 * s2, s2 - 1)]
+    # Right-frame member with the mirror through vertex (1,0), then the
+    # vertex permutation (x, y) -> (1-x-y, x) that ingest applies to every
+    # one-mirror triangle configuration (mirror -> vertical display axis).
+    samples = [[(1 - px - py, px) for (px, py) in
+                [(sp.S(0), sp.S(0)), (x, sp.S(0)), (sp.S(0), sp.S(1)),
+                 (2 - s2, s2 - 1), (3 - 2 * s2, s2 - 1)]]
                for x in xs]
     return {
         "samples": samples,
@@ -92,8 +97,9 @@ def _tri5_family():
                   "lo_label": "2 − √2", "hi_label": "1/√2", "stored_at": 0.0},
         "caption": (
             "One 1-parameter slice of the optimal set: point 1 slides along "
-            "the bottom edge for x ∈ [2 − √2, 1/√2] (right-frame coordinates; "
-            "the stored member is the left endpoint). Its motion is parallel "
+            "the hypotenuse, (1 − x, x) for x ∈ [2 − √2, 1/√2] (right-frame "
+            "coordinates; the stored member is the x = 2 − √2 endpoint). Its "
+            "motion is parallel "
             "to the segment through points 3 and 4, so the tied triangle "
             "(1,3,4) keeps its area; the released triangle (1,2,4) grows. "
             "Every member achieves exactly A = 3 − 2√2."),

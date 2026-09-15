@@ -109,6 +109,30 @@ def eq_to_right_frame(points_str):
     return fixed
 
 
+def orient_triangle_mirror(points_str):
+    """Triangle configurations with exactly one mirror symmetry are stored
+    with that mirror as the vertical axis of the equilateral display, i.e.
+    through the apex (0,1) of the right frame. The container's vertex
+    permutations are exact, area-preserving affine maps, so this changes no
+    value and no digit of precision; it is the identity for configurations
+    already oriented that way, and for every other symmetry group."""
+    import math
+    from .derive import detect_symmetry, TOL
+    pts = [(float(x), float(y)) for x, y in points_str]
+    sym = detect_symmetry("triangle", pts, tol=TOL)
+    if sym["group"] != "D1":
+        return points_str
+    ang = math.degrees(sym["axes"][0]["angle"]) % 180
+    fr = [(Fraction(x), Fraction(y)) for x, y in points_str]
+    if abs(ang - 150) < 1e-6:    # mirror fixes vertex (1,0): send it to the apex
+        fr = [(1 - x - y, x) for x, y in fr]
+    elif abs(ang - 30) < 1e-6:   # mirror fixes vertex (0,0)
+        fr = [(y, 1 - x - y) for x, y in fr]
+    else:                        # already vertical (90 degrees)
+        return points_str
+    return [[frac_to_dec(x), frac_to_dec(y)] for x, y in fr]
+
+
 def fmt15(fr):
     """Format an exact multiple of 1e-15 as a fixed 15-decimal string."""
     scaled = fr * 10 ** 15
@@ -315,6 +339,8 @@ def ingest():
             prev = json.loads(path.read_text()) if path.exists() else None
             best = None
             for cand in gather_candidates(variant, n):
+                if variant == "triangle":
+                    cand["points"] = orient_triangle_mirror(cand["points"])
                 pts = [(Fraction(x), Fraction(y)) for x, y in cand["points"]]
                 res = verify(variant, pts)
                 if not res["feasible"]:
@@ -328,6 +354,8 @@ def ingest():
             # source-directory provenance.
             sticky = sticky_candidate(prev)
             if sticky is not None:
+                if variant == "triangle":
+                    sticky["points"] = orient_triangle_mirror(sticky["points"])
                 pts = [(Fraction(x), Fraction(y)) for x, y in sticky["points"]]
                 res = verify(variant, pts)
                 if res["feasible"] and (best is None or res["_value"] > best[1]["_value"]):
