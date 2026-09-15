@@ -1,10 +1,7 @@
 {
- "ref": "heilbronn-site reconstruct/reconstruct.py",
- "note": "re-polished from the published record figure \u2014 the record holder's arrangement with re-derived coordinates",
- "date": "2026-08-20",
- "method": "sym+multistart polish/tighten, 30s budget, seed 0",
- "detected_symmetry": "C4",
- "published_symmetry": "180\u00b0 Rotationally symmetric",
- "symmetry_match": false,
- "basis": "figure"
+ "ref": "heilbronn-site exact tie-system solve",
+ "note": "exact solution of the symmetry-reduced tie system (8 parameters, 36 tied minimal triangles); literals are the exact values rounded to 30 decimals",
+ "date": "2026-09-15",
+ "method": "symmetric orbit parametrization, Newton to 3000 digits on the tie system, minimal polynomial by LLL on 1650 digits verified at full precision",
+ "basis": "coordinates"
 }

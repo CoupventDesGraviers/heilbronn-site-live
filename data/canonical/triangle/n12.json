@@ -5,60 +5,68 @@
  "frame": "right",
  "points": [
   [
-   "0.24805329455881",
+   "0.2480532945588101072015025122",
    "0"
   ],
   [
    "0",
-   "0.24805329455881"
+   "0.2480532945588101072015025122"
   ],
   [
-   "0.19813118687569",
-   "0.400934406562155"
+   "0.1981311868756899060829922929",
+   "0.4009344065621550469585038536"
   ],
   [
-   "0.06153043694148",
-   "0.87693912611704"
+   "0.06153043694147981193592037569",
+   "0.8769391261170403761281592486"
   ],
   [
-   "0.75194670544119",
-   "0.24805329455881"
+   "0.7519467054411898927984974878",
+   "0.2480532945588101072015025122"
   ],
   [
-   "0.75194670544119",
+   "0.7519467054411898927984974878",
    "0"
   ],
   [
-   "0.400934406562155",
-   "0.19813118687569"
+   "0.4009344065621550469585038536",
+   "0.1981311868756899060829922929"
   ],
   [
-   "0.06153043694148",
-   "0.06153043694148"
+   "0.06153043694147981193592037569",
+   "0.06153043694147981193592037569"
   ],
   [
    "0",
-   "0.75194670544119"
+   "0.7519467054411898927984974878"
   ],
   [
-   "0.24805329455881",
-   "0.75194670544119"
+   "0.2480532945588101072015025122",
+   "0.7519467054411898927984974878"
   ],
   [
-   "0.400934406562155",
-   "0.400934406562155"
+   "0.4009344065621550469585038536",
+   "0.4009344065621550469585038536"
   ],
   [
-   "0.87693912611704",
-   "0.06153043694148"
+   "0.8769391261170403761281592486",
+   "0.06153043694147981193592037569"
   ]
  ],
  "value": {
-  "decimal": "0.0310047817435253133477717385",
-  "fraction": "62009563487050626695543477/2000000000000000000000000000",
+  "decimal": "0.0310047817435254466386619952567",
+  "fraction": "1937798858970340414916374703545869520884556133953814689/62500000000000000000000000000000000000000000000000000000",
   "exact_text": null,
   "exact_sympy": null,
-  "minimal_polynomial": null
+  "minimal_polynomial": "729*x**6 - 291168*x**5 + 390241*x**4 - 43317*x**3 - 4386*x**2 + 5*x + 5",
+  "exact_poly": {
+   "poly": "729*x**6 - 291168*x**5 + 390241*x**4 - 43317*x**3 - 4386*x**2 + 5*x + 5",
+   "near": 0.031004782,
+   "which": "smallest positive",
+   "note": "solved here as the exact critical point of the 3-parameter symmetry-reduced tie system (21 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+  },
+  "exact_decimal": "0.0310047817435254466386619953378577300655973679",
+  "poly_mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>729</mn><msup><mi>x</mi><mn>6</mn></msup><mo>−</mo><mn>291168</mn><msup><mi>x</mi><mn>5</mn></msup><mo>+</mo><mn>390241</mn><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>43317</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>4386</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow></math>"
  },
  "status": "record",
  "credit": {
@@ -71,27 +79,32 @@
  },
  "proof": null,
  "coordinates_source": {
-  "kind": "external",
-  "ref": "David Cantrell's original coordinates (Mathematica list), received September 2026",
-  "note": "Original author's arrangement for the entry, previously shown only as a reconstruction; Cantrell's literals converge to the same configuration under local polishing, and the literals here are that arrangement tightened to 15 decimals.",
-  "basis": null
+  "kind": "reconstructed",
+  "ref": "heilbronn-site exact tie-system solve",
+  "note": "exact solution of the symmetry-reduced tie system (3 parameters, 21 tied minimal triangles); literals are the exact values rounded to 30 decimals",
+  "basis": "coordinates"
  },
- "coordinates_reconstructed": false,
+ "coordinates_reconstructed": true,
  "symmetry": {
   "label": "Completely symmetric"
  },
  "notes": [],
- "changelog": [],
+ "changelog": [
+  {
+   "date": "2026-09-15",
+   "text": "coordinates replaced by the exact tie-system solution (30 decimals); value identified as the smallest positive root of 729A⁶ − 291168A⁵ + 390241A⁴ − 43317A³ − 4386A² + 5A + 5 = 0.031004781743525… (this site, from the symmetry-reduced tie system)"
+  }
+ ],
  "references": [],
  "verify": {
   "n": 12,
   "triples_checked": 220,
-  "value": "0.0310047817435253133477717385",
-  "value_fraction": "62009563487050626695543477/2000000000000000000000000000",
+  "value": "0.0310047817435254466386619952567",
+  "value_fraction": "1937798858970340414916374703545869520884556133953814689/62500000000000000000000000000000000000000000000000000000",
   "min_triple": [
-   0,
-   1,
-   7
+   3,
+   5,
+   10
   ],
   "num_min_ties": 21,
   "feasible": true,

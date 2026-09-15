@@ -74,7 +74,15 @@
   "fraction": "54878337720509755413369687938272339627429188761027742/2463908789273683652122148837394688583269043995267159781",
   "exact_text": null,
   "exact_sympy": null,
-  "minimal_polynomial": null
+  "minimal_polynomial": "4608*x**5 - 10752*x**4 + 9824*x**3 - 3712*x**2 + 482*x - 9",
+  "exact_poly": {
+   "poly": "4608*x**5 - 10752*x**4 + 9824*x**3 - 3712*x**2 + 482*x - 9",
+   "near": 0.022272877,
+   "which": "smallest positive",
+   "note": "solved here as the exact critical point of the 4-parameter symmetry-reduced tie system (28 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+  },
+  "exact_decimal": "0.0222728771289812680876159711627856993758033607",
+  "poly_mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>4608</mn><msup><mi>x</mi><mn>5</mn></msup><mo>−</mo><mn>10752</mn><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><mn>9824</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>3712</mn><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>482</mn><mi>x</mi><mo>−</mo><mn>9</mn></mrow></math>"
  },
  "status": "record",
  "credit": {
@@ -97,7 +105,12 @@
   "label": "4-fold dihedral symmetry"
  },
  "notes": [],
- "changelog": [],
+ "changelog": [
+  {
+   "date": "2026-09-15",
+   "text": "value identified as the smallest positive root of 4608A⁵ − 10752A⁴ + 9824A³ − 3712A² + 482A − 9 = 0.022272877128981… (this site, from the symmetry-reduced tie system)"
+  }
+ ],
  "references": [],
  "verify": {
   "n": 16,

@@ -274,6 +274,114 @@
  "square/20": {
   "symmetry": {
    "label": "90° Rotationally symmetric"
+  },
+  "value": {
+   "exact_poly": {
+    "poly": "5159652213303791781987483648*x**20 - 14873731040215145274619133952*x**19 + 37276541653723146274006171648*x**18 - 52238240118507558517342552064*x**17 + 62502424423753181467918835712*x**16 - 54890303870678162355408859136*x**15 + 41296381321309451287346792448*x**14 - 23990692082786577852058909696*x**13 + 11697128400308059530041718784*x**12 - 4290541018969399815006176256*x**11 + 1307047908489004447138440448*x**10 - 295321305838074373049587520*x**9 + 62957223750583680729904416*x**8 - 8147410609690964182366144*x**7 + 1229653614127639776763512*x**6 - 81632120153696942187372*x**5 + 9337511571257634384074*x**4 - 510601603113382503914*x**3 + 9752576282457500787*x**2 - 48198374124107420*x - 139936077203380",
+    "near": 0.012911556,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 8-parameter symmetry-reduced tie system (36 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "convex/16": {
+  "value": {
+   "exact_poly": {
+    "poly": "4608*x**5 - 10752*x**4 + 9824*x**3 - 3712*x**2 + 482*x - 9",
+    "near": 0.022272877,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 4-parameter symmetry-reduced tie system (28 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "convex/20": {
+  "value": {
+   "exact_poly": {
+    "poly": "38125*x**6 + 304000*x**5 + 238650*x**4 - 101700*x**3 - 31260*x**2 + 4690*x - 61",
+    "near": 0.014464205,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 4-parameter symmetry-reduced tie system (40 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "convex/28": {
+  "value": {
+   "exact_poly": {
+    "poly": "141505808528413609398104*x**21 - 347201852078890289815572*x**20 + 209729327252935753033652*x**19 - 19209568557609663339407*x**18 - 18402477785685131421794*x**17 + 5037232699028666468780*x**16 + 49158865077336142912*x**15 - 156440592887326627509*x**14 + 17907236430244757890*x**13 - 703766695024870589*x**12 + 76173578588367617*x**11 - 7144891802298985*x**10 - 250457266947307*x**9 + 15528870692727*x**8 + 702882992336*x**7 + 73193246084*x**6 - 2711427691*x**5 - 174437795*x**4 + 6324626*x**3 + 60417*x**2 - 4284*x + 27",
+    "near": 0.007627719,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 4-parameter symmetry-reduced tie system (49 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "convex/30": {
+  "value": {
+   "exact_poly": {
+    "poly": "3939947491247037013671875*x**14 - 1809027443005920365234375*x**13 - 561316112395490153671875*x**12 + 168266147723086346328125*x**11 + 39107809958965241518750*x**10 - 5786579420962864331250*x**9 - 979935551940483859375*x**8 + 146070141928380282500*x**7 + 4969296164174601375*x**6 - 1750459881031176750*x**5 + 111249174865605350*x**4 - 2255035524340525*x**3 - 47180338100670*x**2 + 2315489308395*x - 12710533081",
+    "near": 0.0065617395,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 6-parameter symmetry-reduced tie system (60 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "square/28": {
+  "value": {
+   "exact_poly": {
+    "poly": "129855381559548191126323200*x**22 + 1449710972320347984683335680*x**21 - 2478659442167013686701457408*x**20 + 799463337263994585732874240*x**19 + 582844340495777607776731136*x**18 - 300004839192639580226191360*x**17 - 26536855816606898469797888*x**16 + 15880766042285724417654784*x**15 + 2595306939146842889994240*x**14 + 277927529954923803981824*x**13 + 30828271753934824910336*x**12 + 358185307838960007168*x**11 - 169592977963250861696*x**10 - 4134782508965742336*x**9 + 348746682161613952*x**8 + 3609289394806864*x**7 - 384576262753936*x**6 + 797849507416*x**5 + 42062264670*x**4 - 137277605*x**3 - 1196071*x**2 + 3250*x + 9",
+    "near": 0.0067758102,
+    "which": "third-smallest positive",
+    "note": "solved here as the exact critical point of the 6-parameter symmetry-reduced tie system (56 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "triangle/11": {
+  "value": {
+   "exact_poly": {
+    "poly": "386726293821797392786129*x**16 + 5390497410699904416698271*x**15 + 9150784972225868037074965*x**14 + 29882099349975917905402053*x**13 + 96907959773628435631853994*x**12 + 8630833231832902477977498*x**11 + 163485900461635219362256358*x**10 - 73728098063632444097933977*x**9 - 62591326820175894704348590*x**8 + 19409148088019531147406410*x**7 + 8189217351544212941245001*x**6 - 440725435064635936977209*x**5 - 172988796750685677368738*x**4 + 6949815954004975270119*x**3 + 907432336598652742572*x**2 - 61466944226230595232*x + 1011466570038909840",
+    "near": 0.03652989,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 8-parameter symmetry-reduced tie system (17 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "triangle/12": {
+  "value": {
+   "exact_poly": {
+    "poly": "729*x**6 - 291168*x**5 + 390241*x**4 - 43317*x**3 - 4386*x**2 + 5*x + 5",
+    "near": 0.031004782,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 3-parameter symmetry-reduced tie system (21 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "triangle/16": {
+  "value": {
+   "exact_poly": {
+    "poly": "1276816311639009084301936704*x**20 - 3515727588188083487082083808*x**19 + 4504481674986298309572338856*x**18 - 3544794434601911074726581732*x**17 + 1897632078973176461579058411*x**16 - 720220168753873110033931350*x**15 + 194300881473767212177429833*x**14 - 35459425164744613336616820*x**13 + 3505481002013476904379234*x**12 + 121742597444124026011824*x**11 - 100110321847615601443203*x**10 + 14462072044899214707693*x**9 - 513488859485215523454*x**8 - 134719466800524854175*x**7 + 23564054226435925338*x**6 - 1686606722394967080*x**5 + 46806275724363621*x**4 + 1113735737767624*x**3 - 113864012350998*x**2 + 2761817732010*x - 21754092988",
+    "near": 0.017976276,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 8-parameter symmetry-reduced tie system (27 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "triangle/18": {
+  "value": {
+   "exact_poly": {
+    "poly": "43200*x**12 - 310177539*x**11 + 381486159*x**10 + 10547986913*x**9 - 5356562854*x**8 + 3623073265*x**7 + 565010257*x**6 - 356137529*x**5 - 40275162*x**4 + 2253891*x**3 + 6619*x**2 - 717*x + 4",
+    "near": 0.014894343,
+    "which": "second-smallest positive",
+    "note": "solved here as the exact critical point of the 5-parameter symmetry-reduced tie system (33 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
+  }
+ },
+ "triangle/22": {
+  "value": {
+   "exact_poly": {
+    "poly": "4113894419667609830181603*x**22 + 29807468238423455008126578*x**21 - 39085790603220143290920177*x**20 + 24488515905115680120305898*x**19 - 10736525499024455231632668*x**18 + 3768816750540027903994113*x**17 - 1158442379073845833748328*x**16 + 324799853969658361401171*x**15 - 71937195458392144391355*x**14 + 11920737923277897236508*x**13 - 1491784289359000650099*x**12 + 155491081480323732357*x**11 - 18192256172188373745*x**10 + 1431857137555076508*x**9 - 104692732480960029*x**8 + 11430606627963063*x**7 - 705604556304666*x**6 + 16028440098039*x**5 + 15064749231*x**4 - 2374399435*x**3 - 25225143*x**2 + 119664*x + 2704",
+    "near": 0.010266128,
+    "which": "smallest positive",
+    "note": "solved here as the exact critical point of the 6-parameter symmetry-reduced tie system (39 tied minimal triangles); minimal polynomial found by lattice reduction on 1650 digits and verified against a 3000-digit solution"
+   }
   }
  }
 }

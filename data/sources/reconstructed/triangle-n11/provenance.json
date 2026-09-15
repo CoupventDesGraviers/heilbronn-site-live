@@ -1,6 +1,6 @@
 {
  "ref": "heilbronn-site exact tie-system solve",
- "note": "exact solution of the symmetry-reduced tie system (6 parameters, 56 tied minimal triangles); literals are the exact values rounded to 30 decimals",
+ "note": "exact solution of the symmetry-reduced tie system (8 parameters, 17 tied minimal triangles); literals are the exact values rounded to 30 decimals",
  "date": "2026-09-15",
  "method": "symmetric orbit parametrization, Newton to 3000 digits on the tie system, minimal polynomial by LLL on 1650 digits verified at full precision",
  "basis": "coordinates"
