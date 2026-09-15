@@ -207,6 +207,8 @@ def symmetry_label(sym, variant):
         return "180° Rotationally symmetric"
     if g == "C3":
         return "120° Rotationally symmetric"
+    if g == "C4":
+        return "90° Rotationally symmetric"
     if g.startswith("D"):
         k = int(g[1:])
         if k == 1:

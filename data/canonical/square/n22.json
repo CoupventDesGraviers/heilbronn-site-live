@@ -118,7 +118,7 @@
  },
  "coordinates_reconstructed": false,
  "symmetry": {
-  "label": "Symmetric with respect to both diagonals"
+  "label": "180° Rotationally symmetric"
  },
  "notes": [
   "Found with AlphaEvolve (Google Cloud) and submitted in August 2026, superseding the previous <code>.009569+</code> record (Nathan Sudermann-Merx)."

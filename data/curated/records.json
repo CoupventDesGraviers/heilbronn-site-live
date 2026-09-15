@@ -211,7 +211,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "180° Rotationally symmetric",
   "notes": []
  },
  "square/19": {
@@ -237,7 +237,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "180° Rotationally symmetric",
+  "symmetry": "90° Rotationally symmetric",
   "notes": []
  },
  "square/21": {
@@ -263,7 +263,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Symmetric with respect to both diagonals",
+  "symmetry": "180° Rotationally symmetric",
   "notes": []
  },
  "square/23": {
@@ -289,7 +289,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Completely symmetric",
+  "symmetry": "Vertically and horizontally symmetric",
   "notes": []
  },
  "square/25": {
@@ -367,7 +367,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "180° Rotationally symmetric",
   "notes": []
  },
  "square/31": {
@@ -393,7 +393,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Completely symmetric",
   "notes": []
  },
  "square/33": {
@@ -660,7 +660,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "120° Rotationally symmetric",
   "notes": []
  },
  "triangle/20": {
@@ -699,7 +699,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Fully symmetric",
   "notes": []
  },
  "triangle/23": {
@@ -712,7 +712,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Mirror symmetric",
   "notes": []
  },
  "triangle/24": {
@@ -764,7 +764,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Fully symmetric",
   "notes": []
  },
  "triangle/28": {
@@ -777,7 +777,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Fully symmetric",
   "notes": []
  },
  "triangle/29": {
@@ -803,7 +803,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Fully symmetric",
   "notes": []
  },
  "triangle/31": {
@@ -816,7 +816,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Fully symmetric",
   "notes": []
  },
  "triangle/32": {
@@ -842,7 +842,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "Not symmetric",
+  "symmetry": "Fully symmetric",
   "notes": []
  },
  "triangle/34": {
@@ -1083,7 +1083,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "No symmetry",
+  "symmetry": "120° Rotationally symmetric",
   "notes": []
  },
  "convex/20": {
@@ -1122,7 +1122,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "No symmetry",
+  "symmetry": "Mirror symmetric",
   "notes": []
  },
  "convex/23": {
@@ -1226,7 +1226,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "6-fold dihedral symmetry",
+  "symmetry": "5-fold dihedral symmetry",
   "notes": []
  },
  "convex/31": {
@@ -1239,7 +1239,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "5-fold dihedral symmetry",
+  "symmetry": "No symmetry",
   "notes": []
  },
  "convex/32": {
@@ -1252,7 +1252,7 @@
   },
   "proved": null,
   "trivial": false,
-  "symmetry": "8-fold dihedral symmetry",
+  "symmetry": "4-fold dihedral symmetry",
   "notes": []
  },
  "convex/33": {

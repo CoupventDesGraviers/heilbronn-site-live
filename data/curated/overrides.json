@@ -412,6 +412,9 @@
     "which": "second-smallest positive",
     "note": "solved here as the exact critical point of the 8-parameter symmetry-reduced tie system (72 tied minimal triangles); minimal polynomial found by lattice reduction on 4400 digits and verified against an 8000-digit solution"
    }
+  },
+  "symmetry": {
+   "label": "Completely symmetric"
   }
  },
  "triangle/19": {
