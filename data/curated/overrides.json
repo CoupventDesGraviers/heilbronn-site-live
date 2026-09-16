@@ -269,7 +269,15 @@
  "convex/9": {
   "notes": [
    "David Cantrell's original mirror-symmetric coordinates (2007), tightened to 15 decimals; this site's earlier asymmetric re-derivation of the same optimum differed only at rounding level."
-  ]
+  ],
+  "value": {
+   "exact_poly": {
+    "poly": "4636072741330*x**14 + 1774549666005*x**13 - 1233481443979*x**12 - 1367692325626*x**11 - 694825007492*x**10 + 38268929375*x**9 + 102061390459*x**8 + 123696372*x**7 - 5255868622*x**6 + 66844595*x**5 + 131075035*x**4 - 8755802*x**3 - 171936*x**2 - 24711*x + 2645",
+    "near": 0.064064752,
+    "which": "smallest positive",
+    "note": "solved here from the 6-parameter symmetry-reduced tie system (11 tied minimal triangles), whose solutions form a curve, together with stationarity of the value along that curve; minimal polynomial found by lattice reduction on 825 digits and verified against a 1500-digit solution"
+   }
+  }
  },
  "square/20": {
   "symmetry": {
@@ -474,6 +482,16 @@
     "near": 0.015931092,
     "which": "second-smallest positive",
     "note": "solved here as the exact critical point of the 12-parameter symmetry-reduced tie system (33 tied minimal triangles); minimal polynomial found by lattice reduction on 11000 digits and verified against a 20000-digit solution"
+   }
+  }
+ },
+ "convex/10": {
+  "value": {
+   "exact_poly": {
+    "poly": "9088*x**4 - 4928*x**3 + 708*x**2 - 44*x + 1",
+    "near": 0.051993072,
+    "which": "smallest positive",
+    "note": "solved here from the 3-parameter symmetry-reduced tie system (16 tied minimal triangles), whose solutions form a curve, together with stationarity of the value along that curve; minimal polynomial found by lattice reduction on 825 digits and verified against a 1500-digit solution"
    }
   }
  }

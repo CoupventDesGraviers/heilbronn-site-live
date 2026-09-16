@@ -1,0 +1,7 @@
+{
+ "ref": "heilbronn-site exact tie-system solve",
+ "note": "exact solution of the symmetry-reduced tie system (6 parameters, 11 tied minimal triangles) with the value stationary along its one-parameter solution curve; literals are the exact values rounded to 30 decimals",
+ "date": "2026-09-15",
+ "method": "symmetric orbit parametrization, Newton to 1500 digits on the tie system plus the stationarity determinant, minimal polynomial by LLL on 825 digits verified at full precision",
+ "basis": "coordinates"
+}

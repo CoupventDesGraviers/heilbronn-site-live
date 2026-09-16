@@ -50,7 +50,15 @@
   "fraction": "31911098687559211283390260581704192586852288448000407555/613756751675608745738525675200952303368915096382241329108",
   "exact_text": null,
   "exact_sympy": null,
-  "minimal_polynomial": null
+  "minimal_polynomial": "9088*x**4 - 4928*x**3 + 708*x**2 - 44*x + 1",
+  "exact_poly": {
+   "poly": "9088*x**4 - 4928*x**3 + 708*x**2 - 44*x + 1",
+   "near": 0.051993072,
+   "which": "smallest positive",
+   "note": "solved here from the 3-parameter symmetry-reduced tie system (16 tied minimal triangles), whose solutions form a curve, together with stationarity of the value along that curve; minimal polynomial found by lattice reduction on 825 digits and verified against a 1500-digit solution"
+  },
+  "exact_decimal": "0.0519930715229432002545036182708711660295373243",
+  "poly_mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>9088</mn><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>4928</mn><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><mn>708</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>44</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow></math>"
  },
  "status": "record",
  "credit": {
@@ -73,7 +81,12 @@
   "label": "2-fold dihedral symmetry"
  },
  "notes": [],
- "changelog": [],
+ "changelog": [
+  {
+   "date": "2026-09-15",
+   "text": "value identified as the smallest positive root of 9088A⁴ − 4928A³ + 708A² − 44A + 1 = 0.051993071522943… (this site, from the symmetry-reduced tie system)"
+  }
+ ],
  "references": [],
  "verify": {
   "n": 10,

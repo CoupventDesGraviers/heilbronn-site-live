@@ -5,48 +5,56 @@
  "frame": "free",
  "points": [
   [
-   "-0.000012895408779",
-   "0.296579224073412"
+   "0.3779976003797809797857153981",
+   "0.4797261705995638882664213027"
   ],
   [
-   "0.434910977990233",
-   "0.999994249226408"
+   "0.04055276724001416488543207326",
+   "0.6883694483175952123662621378"
   ],
   [
-   "0.999992376092386",
-   "0.488034996732474"
+   "0.2861517375014286792418244286",
+   "0.9594523411991277765328426054"
   ],
   [
-   "0.257306233276222",
-   "-1.000005626065949"
+   "1",
+   "0.6031682480780505035754822184"
   ],
   [
-   "0.88598854151071",
-   "-0.255961516726671"
+   "0.64306446404611523802342322",
+   "0.9047620085567146366909618041"
   ],
   [
-   "-0.434936768807791",
-   "0.999994249226408"
+   "0.04055276724001416488543207326",
+   "0.2710828928815325641665804676"
   ],
   [
-   "-1.000018166909944",
-   "0.488034996732474"
+   "0.2861517375014286792418244286",
+   "0"
   ],
   [
-   "-0.25733202409378",
-   "-1.000005626065949"
+   "1",
+   "0.356284093121077272957360387"
   ],
   [
-   "-0.886014332328268",
-   "-0.255961516726671"
+   "0.64306446404611523802342322",
+   "0.05469033264241313984188080128"
   ]
  ],
  "value": {
-  "decimal": "0.0640647523079378595146805969120",
-  "fraction": "95728390959195309110240403615/1494244299877425855234300682684",
+  "decimal": "0.0640647523079416997628889229358",
+  "fraction": "22030432042022293859569601239658895430977383310477983825/343877580859566069955668414528879070546941296226532952153",
   "exact_text": null,
   "exact_sympy": null,
-  "minimal_polynomial": null
+  "minimal_polynomial": "4636072741330*x**14 + 1774549666005*x**13 - 1233481443979*x**12 - 1367692325626*x**11 - 694825007492*x**10 + 38268929375*x**9 + 102061390459*x**8 + 123696372*x**7 - 5255868622*x**6 + 66844595*x**5 + 131075035*x**4 - 8755802*x**3 - 171936*x**2 - 24711*x + 2645",
+  "exact_poly": {
+   "poly": "4636072741330*x**14 + 1774549666005*x**13 - 1233481443979*x**12 - 1367692325626*x**11 - 694825007492*x**10 + 38268929375*x**9 + 102061390459*x**8 + 123696372*x**7 - 5255868622*x**6 + 66844595*x**5 + 131075035*x**4 - 8755802*x**3 - 171936*x**2 - 24711*x + 2645",
+   "near": 0.064064752,
+   "which": "smallest positive",
+   "note": "solved here from the 6-parameter symmetry-reduced tie system (11 tied minimal triangles), whose solutions form a curve, together with stationarity of the value along that curve; minimal polynomial found by lattice reduction on 825 digits and verified against a 1500-digit solution"
+  },
+  "exact_decimal": "0.0640647523079416997628889229773599724292772168",
+  "poly_mathml": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow><mn>4636072741330</mn><msup><mi>x</mi><mn>14</mn></msup><mo>+</mo><mn>1774549666005</mn><msup><mi>x</mi><mn>13</mn></msup><mo>−</mo><mn>1233481443979</mn><msup><mi>x</mi><mn>12</mn></msup><mo>−</mo><mn>1367692325626</mn><msup><mi>x</mi><mn>11</mn></msup><mo>−</mo><mn>694825007492</mn><msup><mi>x</mi><mn>10</mn></msup><mo>+</mo><mn>38268929375</mn><msup><mi>x</mi><mn>9</mn></msup><mo>+</mo><mn>102061390459</mn><msup><mi>x</mi><mn>8</mn></msup><mo>+</mo><mn>123696372</mn><msup><mi>x</mi><mn>7</mn></msup><mo>−</mo><mn>5255868622</mn><msup><mi>x</mi><mn>6</mn></msup><mo>+</mo><mn>66844595</mn><msup><mi>x</mi><mn>5</mn></msup><mo>+</mo><mn>131075035</mn><msup><mi>x</mi><mn>4</mn></msup><mo>−</mo><mn>8755802</mn><msup><mi>x</mi><mn>3</mn></msup><mo>−</mo><mn>171936</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>24711</mn><mi>x</mi><mo>+</mo><mn>2645</mn></mrow></math>"
  },
  "status": "record",
  "credit": {
@@ -59,25 +67,30 @@
  },
  "proof": null,
  "coordinates_source": {
-  "kind": "external",
-  "ref": "David Cantrell's Mathematica notebook UltimateHeilbronn.nb (2007), received September 2026",
-  "note": "Original author's mirror-symmetric arrangement, tightened to 15 decimals with the symmetry kept exactly (an asymmetric rounding of the same optimum scores higher by only 4e-14 relative).",
-  "basis": null
+  "kind": "reconstructed",
+  "ref": "heilbronn-site exact tie-system solve",
+  "note": "exact solution of the symmetry-reduced tie system (6 parameters, 11 tied minimal triangles) with the value stationary along its one-parameter solution curve; literals are the exact values rounded to 30 decimals",
+  "basis": "coordinates"
  },
- "coordinates_reconstructed": false,
+ "coordinates_reconstructed": true,
  "symmetry": {
   "label": "2-fold symmetry"
  },
  "notes": [
   "David Cantrell's original mirror-symmetric coordinates (2007), tightened to 15 decimals; this site's earlier asymmetric re-derivation of the same optimum differed only at rounding level."
  ],
- "changelog": [],
+ "changelog": [
+  {
+   "date": "2026-09-15",
+   "text": "coordinates replaced by the exact tie-system solution (30 decimals); value identified as the smallest positive root of 4636072741330A¹⁴ + 1774549666005A¹³ − 1233481443979A¹² − 1367692325626A¹¹ − 694825007492A¹⁰ + 38268929375A⁹ + 102061390459A⁸ + 123696372A⁷ − 5255868622A⁶ + 66844595A⁵ + 131075035A⁴ − 8755802A³ − 171936A² − 24711A + 2645 = 0.064064752307941… (this site, from the symmetry-reduced tie system)"
+  }
+ ],
  "references": [],
  "verify": {
   "n": 9,
   "triples_checked": 84,
-  "value": "0.0640647523079378595146805969120",
-  "value_fraction": "95728390959195309110240403615/1494244299877425855234300682684",
+  "value": "0.0640647523079416997628889229358",
+  "value_fraction": "22030432042022293859569601239658895430977383310477983825/343877580859566069955668414528879070546941296226532952153",
   "min_triple": [
    0,
    2,
