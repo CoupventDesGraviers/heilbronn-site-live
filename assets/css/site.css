@@ -122,7 +122,6 @@ code {
 .badge-record { background: #e3ecf7; color: #23568f; border-color: #c2d4ea; }
 .badge-reconstructed { background: #f7efd8; color: #8a6d1a; border-color: #e6d5a3; }
 .badge-trivial { background: var(--code-bg); color: var(--muted); border-color: var(--line); }
-.badge-recon { background: transparent; color: var(--muted); border-color: var(--line); }
 @media (prefers-color-scheme: dark) {
   .badge-proven { background: #1c3323; color: #8ed4a0; border-color: #2c4f37; }
   .badge-record { background: #1c2a3d; color: #8db8e8; border-color: #2b4363; }
