@@ -24,40 +24,41 @@ BASE = "/heilbronn"
 
 META = {
     "square": {
-        "title": "The Heilbronn problem for squares",
+        "title": "The Heilbronn Problem for Squares",
         "short": "Square",
         "card_title": "Squares",
-        "blurb": "n points in the unit square.",
+        "blurb": "Arranging n points in the unit square to maximize the minimal triangle area.",
         "intro": (
-            "<p>Place <em>n</em> points in the unit square so that the smallest "
-            "triangle determined by any three of them has area A as large as "
-            "possible. Optimality is proven for n ≤ 9; every later entry is a "
-            "best known configuration.</p>"),
+            "<p>Distribute <em>n</em> points in the unit square [0,1]² to maximize the area "
+            "A(n) of the smallest triangle formed by any three points. Optimality is formally "
+            "proven for n ≤ 9; for n ≥ 10, the values shown represent the current best-known "
+            "configurations found by numerical search and geometric construction.</p>"),
     },
     "triangle": {
-        "title": "The Heilbronn problem for triangles",
+        "title": "The Heilbronn Problem for Triangles",
         "short": "Triangle",
         "card_title": "Triangles",
-        "blurb": "n points in a triangle of unit area.",
+        "blurb": "Optimal point arrangements in a triangle of unit area.",
         "intro": (
-            "<p>Place <em>n</em> points in a triangle of unit area. The problem is "
-            "affine-invariant, so the triangle's shape does not matter: "
-            "coordinates are stored in the right triangle (0,0),(1,0),(0,1) and "
-            "drawn equilateral. Papers that use the unit <em>right</em> triangle "
-            "(area ½) quote values half as large as these. Optimality is proven "
+            "<p>Place <em>n</em> points in a triangle of unit area. Because the problem is "
+            "invariant under affine transformations, the specific triangle shape does not affect "
+            "the normalized area: coordinates are stored in the standard right triangle "
+            "(0,0), (1,0), (0,1) and displayed as an equilateral figure. Note that literature "
+            "using the unnormalized right triangle with vertices (0,0),(1,0),(0,1) has area 1/2, "
+            "and therefore reports values exactly half of those shown here. Optimality is proven "
             "for n ≤ 8.</p>"),
     },
     "convex": {
-        "title": "The Heilbronn problem for convex regions",
+        "title": "The Heilbronn Problem for Convex Regions",
         "short": "Convex",
         "card_title": "Convex regions",
-        "blurb": "n points in a convex region chosen freely, of unit area.",
+        "blurb": "Maximizing minimal triangle area when the convex container is optimized freely.",
         "intro": (
-            "<p>Here the container is part of the optimization: the points may "
-            "lie in <em>any</em> convex region of unit area. The optimal region is the "
-            "convex hull of the points, so every configuration is a polygon and "
-            "A is the smallest triangle area divided by the hull area. Settled "
-            "for n ≤ 8.</p>"),
+            "<p>In this variant, the enclosing container is itself optimized: the points may lie "
+            "in <em>any</em> convex region of unit area. Because any area outside the points' "
+            "convex hull only decreases the normalized ratio, the optimal container is always "
+            "the convex hull of the point set itself. The objective A is thus the minimal triangle "
+            "area divided by the convex hull area. Optimality has been established for n ≤ 8.</p>"),
     },
 }
 
@@ -176,6 +177,8 @@ def provenance_lines(doc, derived):
             "paper": "exact, as published in",
             "external": "by an external contributor, re-verified here",
         }.get(src["kind"], src["kind"])
+        if src["kind"] == "external" and (src.get("ref") or "").startswith("TejSteadQC/"):
+            kind_text = "from this site's companion repository, re-verified here"
         # ref and note flow in from source meta.json files — for the
         # "external" kind that is contributor-supplied text, and provenance
         # lines render with |safe, so escape rather than trust it.
@@ -459,23 +462,19 @@ def recon_label(doc):
 
 
 METHODS_BODY = """
-<p>Everything on this site is generated ahead of time from exact coordinate
-data; the pages you're reading are static files. The generator, the data,
-the verification and search code, and the deployment all live in one public
-repository, <a href="https://github.com/tejstead/heilbronn-site">tejstead/heilbronn-site</a>:
-every value shown here can be reproduced from what is in that tree. Merges
-to it deploy automatically.</p>
+<p>This site is an open, fully reproducible archive of best-known configurations
+for the Heilbronn problem. Every figure, table, and data download is compiled directly
+from exact coordinate records. All data, search tools, and exact verification pipelines
+are open source in <a href="https://github.com/tejstead/heilbronn-site">tejstead/heilbronn-site</a>,
+meaning any result on this site can be verified independently on your own machine.</p>
 
 <h2>Where the coordinates come from</h2>
 <ul>
-<li><strong>Community submissions</strong> — records and exact values arrive
-as pull requests
-(<a href="https://github.com/tejstead/heilbronn-site/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>):
-a directory of decimal literals plus provenance, verified in exact
-arithmetic by CI, with the report posted on the PR. Submissions from trusted
-regulars merge automatically once verification passes and are live minutes
-later. Recent records arrived this way from Nathan Sudermann-Merx, Rhys
-Chappell, and Chouaieb Nemri.</li>
+<li><strong>Community contributions</strong> — new configurations and exact
+algebraic proofs are submitted via pull requests (see <a href="https://github.com/tejstead/heilbronn-site/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>).
+Continuous integration computes all triangle areas in exact rational arithmetic and posts
+an automated verification report on the PR. Recent record submissions include contributions
+from Nathan Sudermann-Merx, Rhys Chappell, and Chouaieb Nemri.</li>
 <li><a href="https://github.com/TejSteadQC/heilbronn-configurations">TejSteadQC/heilbronn-configurations</a>
 — the working repository for this site's own record campaigns (n = 17…36
 across the variants and batches below that); its search toolkit is vendored
@@ -504,27 +503,29 @@ labeled <em>reconstructed</em> and never claim to be the original author's
 exact arrangement.</li>
 </ul>
 
-<h2>How records are found</h2>
-<p>The search toolkit (<code>search/</code> in the site repository) combines
-basin-hopping over perturb-and-polish cycles (<code>attack.py</code>),
-trust-region successive-LP polishing with KKT tightening
-(<code>refine.py</code>), symmetry-restricted search (<code>sym.py</code>),
-n&nbsp;→&nbsp;n+1 laddering and symmetric seeding, and consensus checks
-across independent runs. Several 2026 records instead came from programs
-evolved by AlphaEvolve — search code written by an LLM-guided evolutionary
-loop — run and extended by the contributors above.</p>
+<h2>How New Records Are Discovered</h2>
+<p>Finding candidate configurations requires navigating high-dimensional, non-convex
+landscapes where local optima proliferate rapidly. The repository includes an optimization
+toolkit (under <code>search/</code>) employing several complementary strategies:</p>
+<ul>
+  <li><strong>Basin-hopping &amp; Local Search (<code>attack.py</code>):</strong> Alternates random coordinate perturbations with local minimization to escape shallow basins.</li>
+  <li><strong>Successive Linear Programming (<code>refine.py</code>):</strong> Uses trust-region SLP polishing with Karush-Kuhn-Tucker (KKT) tightening to drive candidate coordinates to machine precision.</li>
+  <li><strong>Symmetry Restriction (<code>sym.py</code>):</strong> Restricts point placements to candidate point groups (such as dihedral and cyclic symmetries), drastically reducing the dimension of the search space.</li>
+  <li><strong>Laddering &amp; Seeding:</strong> Bootstraps an n-point configuration by strategically inserting an additional point into the (n-1) optimum and re-optimizing.</li>
+  <li><strong>Evolved Heuristics:</strong> Several recent records (e.g. square n = 17, 21, and 22) originated from heuristic search algorithms generated by DeepMind's AlphaEvolve system, executed and refined by community contributors.</li>
+</ul>
 
-<h2>Exact values</h2>
-<p>Where an entry shows a closed form or a minimal polynomial, it comes from
-one of three routes: the optimality proofs; contributor-supplied polynomials
-(submitted alongside coordinates and re-validated against them at 45 digits
-at build time); or derivation on this site — identifying the tight triangles,
-reducing by the configuration's symmetry, and solving the resulting tie
-system exactly (Gröbner bases, then linear programs for any slack points).
-The triangle n&nbsp;=&nbsp;15 quintic and the square n&nbsp;=&nbsp;10, 12
-cubics were obtained this way. Whether a value is displayed as nested
-radicals or as a polynomial is not taste but Galois theory: several entries
-provably have no radical form, and the pages say so.</p>
+<h2>Exact Algebraic Values</h2>
+<p>Whenever a configuration has an exact closed form, we determine its minimal polynomial
+through one of three paths: formal optimality proofs from the literature, polynomials
+provided by contributors (validated to 45 digits at build time), or direct symbolic
+derivation. For derived values, we identify the tightest triangle constraints, reduce them
+by the configuration's symmetry group, and solve the polynomial tie system using Gröbner
+bases followed by linear programming for any interior slack points.</p>
+<p>This process yielded the degree-5 quintic for triangle n&nbsp;=&nbsp;15 and the cubics for square
+n&nbsp;=&nbsp;10 and 12. In cases where a polynomial's Galois group is not solvable by radicals,
+algebraic theory prohibits any closed form in terms of nested roots; for those entries,
+we report the root of the minimal polynomial directly.</p>
 
 <h2>Verification</h2>
 <p>Every configuration on this site is checked with exact rational
@@ -543,13 +544,13 @@ retired circle variant used a unit-<em>radius</em> disk (area π). The triangle
 problem is affine-invariant, so coordinates are stored in the right frame
 (0,0),(1,0),(0,1) and displayed equilateral.</p>
 
-<h2>Attribution</h2>
-<p>The record tables here descend from those Erich Friedman curated for
-decades at his Packing Center, offline since 2026: the historical values,
-credits and symmetry labels recorded from those pages are now maintained
-in this repository as <code>data/curated/records.json</code>. None of his
-images are reproduced. Who holds what is tallied on the
-<a href="/heilbronn/leaderboard/">leaderboard</a>.</p>
+<h2>Historical Origin &amp; Attribution</h2>
+<p>These record tables build on the work of Erich Friedman, whose Packing Center
+cataloged Heilbronn configurations for decades before going offline in 2026.
+We preserved his historical records, attribution notes, and symmetry classifications
+in <code>data/curated/records.json</code>. All figures on this site are generated
+anew from verified coordinate sets. Individual record holders and proof credits
+are tracked on the <a href="/heilbronn/leaderboard/">leaderboard</a>.</p>
 """
 
 

@@ -62,10 +62,6 @@ jobs:
               case "$status" in added|modified) ;; *) bad=1;; esac
               case "$path" in
                 data/sources/external/*) ;;
-                # companion-repo sync lane: only the site's own accounts may
-                # auto-merge into it (anyone else would be misattributing)
-                data/sources/tejsteadqc/*)
-                  case "$author_lc" in tejstead|tejsteadqc) ;; *) bad=1;; esac ;;
                 *) bad=1;;
               esac
             done < <(gh api "repos/$REPO/pulls/$pr/files" --paginate \

@@ -181,18 +181,6 @@ def gather_candidates(variant, n):
     """Yield candidate dicts: {points (list of [str,str]), kind, ref, note}."""
     tag = f"{variant}-n{n:02d}"
 
-    d = SOURCES / "tejsteadqc" / tag
-    if d.exists():
-        meta = json.loads((d / "meta.json").read_text())
-        pts = parse_points_text((d / "coordinates.txt").read_text())
-        yield {
-            "points": points_to_strings(pts),
-            "kind": "author",
-            "ref": f"TejSteadQC/heilbronn-configurations {meta['origin']}",
-            "note": None,
-            "verify_upstream": json.loads((d / "verify_output.json").read_text()),
-        }
-
     ae = SOURCES / "alphaevolve" / f"{variant}_n{n}.txt"
     if ae.exists():
         text = ae.read_text()

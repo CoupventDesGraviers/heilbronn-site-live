@@ -42,12 +42,9 @@ from build.derive import (detect_symmetry, symmetry_label,  # noqa: E402
                           minimal_triangles, congruence_classes)
 
 # Lanes the automated pipeline verifies. external/ is THE submission lane
-# (meta.json needs "ref") — see CONTRIBUTING.md. tejsteadqc/ is the legacy
-# companion-repo sync lane (meta.json needs "origin"), kept so existing
-# sync PRs still verify; new submissions must not use it.
+# (meta.json needs "ref") — see CONTRIBUTING.md.
 SUBMISSION_ROOTS = {
     "data/sources/external": "ref",
-    "data/sources/tejsteadqc": "origin",
 }
 DIR_RE = re.compile(r"^(square|triangle|convex)-n(\d{2})$")
 NUM_RE = re.compile(r"^-?\d{1,6}(\.\d{1,200})?$")

@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>The Heilbronn Problem</h1>
-<p class="lede">Place <em>n</em> points in a region of unit area so that the
-smallest triangle formed by any three of them has the largest possible
-area A(n).</p>
+<p class="lede">Place <em>n</em> points in a unit-area region such that the
+smallest triangle determined by any three points achieves the largest possible
+area, A(n).</p>
 
-<p>Best known configurations for three containers, with exact coordinates
-for download, congruence and symmetry shown on every figure, links to the
-proofs, and an in-browser <a href="{{ base }}/verifier/">verifier</a>.</p>
+<p>This site collects the best known configurations across three classic containers:
+the square, the triangle, and optimal convex regions. Each entry includes exact
+coordinates, symmetry and congruence analysis, references to published proofs,
+and an in-browser <a href="{{ base }}/verifier/">rational arithmetic verifier</a>.</p>
 
 <div class="index-figs">
 {% for v in variants %}

@@ -3,8 +3,10 @@
 
 - TejSteadQC/heilbronn-configurations: scan every claims*/ directory, verify
   the dual verifier outputs agree, and keep the BEST configuration per
-  (variant, n) by exact value. Batch claims re-polish other people's record
-  figures, so "best" is a statement about coordinates, not credit.
+  (variant, n) by exact value, written into the ordinary submission lane
+  data/sources/external/ (never replacing a better entry already there).
+  Batch claims re-polish other people's record figures, so "best" is a
+  statement about coordinates, not credit.
 - spiralulam/heilbronn: square n=3..16 JSONs + LICENSE, copied verbatim.
 - AlphaEvolve mirrors (from the tejsteadqc clone): triangle n=11,
   convex n=13/14.
@@ -25,7 +27,7 @@ import sys
 from fractions import Fraction
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-OUT_TSQ = ROOT / "data" / "sources" / "tejsteadqc"
+OUT_EXT = ROOT / "data" / "sources" / "external"
 OUT_SPIRAL = ROOT / "data" / "sources" / "spiralulam"
 OUT_AE = ROOT / "data" / "sources" / "alphaevolve"
 
@@ -76,28 +78,30 @@ def sync_tejsteadqc(repo):
         if key not in best or v > best[key][0]:
             best[key] = (v, d, origin)
 
-    if OUT_TSQ.exists():
-        shutil.rmtree(OUT_TSQ)
-    OUT_TSQ.mkdir(parents=True)
+    # Companion-repo claims go into the ordinary submission lane, one
+    # directory per (variant, n). An existing external entry is replaced only
+    # when the claim strictly improves on it.
+    OUT_EXT.mkdir(parents=True, exist_ok=True)
+    written = 0
     for (variant, n), (v, d, origin) in sorted(best.items()):
-        dest = OUT_TSQ / f"{variant}-n{n:02d}"
+        dest = OUT_EXT / f"{variant}-n{n:02d}"
+        if dest.exists():
+            a = json.loads((dest / "verify_output.json").read_text())["a"] \
+                if (dest / "verify_output.json").exists() else None
+            if a is None or Fraction(a["value_fraction"]) >= v:
+                continue
+            shutil.rmtree(dest)
         dest.mkdir()
         shutil.copy(d / "coordinates.txt", dest / "coordinates.txt")
         shutil.copy(d / "verify_output.json", dest / "verify_output.json")
         (dest / "meta.json").write_text(json.dumps({
-            "origin": origin,
-            "value_fraction": f"{v.numerator}/{v.denominator}",
+            "ref": f"TejSteadQC/heilbronn-configurations {origin}",
+            "credit": "Tej Stead",
+            "note": "this site's own search campaign (companion repository); "
+                    "dual-verified upstream, see verify_output.json",
         }, indent=1) + "\n")
-    (OUT_TSQ / "ATTRIBUTION.md").write_text(
-        "# Attribution\n\n"
-        "Coordinates from [TejSteadQC/heilbronn-configurations]"
-        "(https://github.com/TejSteadQC/heilbronn-configurations),\n"
-        "selected per (variant, n) as the best exact value across all claims\n"
-        "batches by `build/sync_sources.py`. Each `meta.json` records the\n"
-        "originating claim directory. Batch claims that re-polish other\n"
-        "authors' published record figures carry those authors' credit — see\n"
-        "the batch READMEs upstream.\n")
-    print(f"tejsteadqc: {len(best)} configurations vendored")
+        written += 1
+    print(f"tejsteadqc: {written} configurations written to external/")
     return best
 
 

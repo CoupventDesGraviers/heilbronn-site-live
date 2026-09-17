@@ -1,16 +1,17 @@
 # heilbronn-site
 
-Static site for the Heilbronn problem, served at
-<https://math.tejstead.com/heilbronn>. It began as an enhanced take on the
-Heilbronn pages of Erich Friedman's Packing Center (squares, triangles,
-convex regions; n = 3–35, squares now to 36) and continues those record tables now that the
-Packing Center is offline (since 2026): downloadable exact coordinates, an
-interactive symmetry/congruence viewer, a client-side verifier, proof links,
-and per-n record history.
+An open archive and computational atlas for the Heilbronn triangle problem,
+served at <https://math.tejstead.com/heilbronn>.
 
-Everything is generated ahead of time on a laptop; the server only serves
-static files (precompressed, long-cached). No JS except the viewer and
-verifier enhancements — every page works fully with JS disabled.
+This project continues and expands the historical records maintained for decades
+at Erich Friedman's Packing Center (offline since 2026). It provides exact coordinates,
+algebraic closed forms, symmetry and congruence visualizers, formal proof references,
+and an in-browser exact rational arithmetic verifier across squares, triangles,
+and general convex containers for n = 3 to 36.
+
+The site is built as purely static HTML and vector SVGs with zero runtime dependencies.
+Interactive features (such as the point viewer and coordinate verifier) enhance the
+experience progressively while keeping all pages fully readable without JavaScript.
 
 **Have a better configuration — or the exact value for one?** See
 [CONTRIBUTING.md](CONTRIBUTING.md): submissions are plain pull requests

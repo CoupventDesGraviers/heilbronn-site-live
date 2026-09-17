@@ -3,11 +3,11 @@
 {% block description %}Paste coordinates and verify a Heilbronn configuration exactly, in your browser.{% endblock %}
 {% block content %}
 <h1>Configuration verifier</h1>
-<p>Paste coordinates (one <code>x y</code> pair per line; <code>#</code> starts a
-comment — the same format as this site's <code>points.txt</code> downloads).
-Everything runs in your browser with <strong>exact rational arithmetic</strong>:
-the value reported is the exact minimum triangle area implied by your decimal
-literals, over all C(n,3) triples, normalized for the chosen container.</p>
+<p>Paste candidate point coordinates below (one <code>x y</code> pair per line; lines starting
+with <code>#</code> are treated as comments, matching the site's downloadable <code>points.txt</code> files).
+Computation runs entirely in your browser using <strong>exact rational arithmetic</strong> (BigInt fractions).
+The verifier evaluates all C(n, 3) possible triangles without floating-point rounding errors, reporting
+the exact minimal triangle area and checking whether your configuration improves upon the current best-known record.</p>
 
 <noscript><p class="banner">The verifier needs JavaScript — it computes
 everything client-side; nothing is uploaded.</p></noscript>

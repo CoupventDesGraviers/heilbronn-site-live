@@ -13,20 +13,20 @@ decay on the log scale. The three variants order as convex &gt; triangle ≥
 square for small n and converge as n grows.</figcaption></figure>
 
 <figure class="chart">{{ charts["normalized"] | safe }}
-<figcaption>Multiplying by n² makes the conjectured behavior visible:
-Komlós–Pintz–Szemerédi proved A(n) ≥ c·log n / n², so n²·A(n) grows
-slowly without bound; the best known upper bound, A(n) ≤ n<sup>−8/7−1/2000</sup>
-(Cohen–Pohoata–Zakharov 2023), only caps n²·A(n) at n<sup>6/7−1/2000</sup>, so
-the truth lies somewhere between log n and a power of n. In this range the
-curve drifts in a narrow band — the asymptotics are nowhere in sight at
-n ≤ 36.</figcaption></figure>
+<figcaption>Plotting the normalized product n² · A(n) highlights the gap between
+asymptotic theory and finite-n behavior. In 1982, Komlós, Pintz, and Szemerédi
+proved that A(n) ≥ c · (log n) / n², establishing that n² · A(n) must eventually grow
+without bound. Meanwhile, the sharpest known upper bound, A(n) ≤ n<sup>−8/7 − 1/2000</sup>
+(Cohen, Pohoata, and Zakharov, 2023), leaves substantial room between logarithmic growth
+and polynomial decay. Within our computational window (n ≤ 36), the normalized curve
+hovers in a stable band, demonstrating that asymptotic regimes remain distant at small n.</figcaption></figure>
 
 <figure class="chart">{{ charts["ties"] | safe }}
-<figcaption>How many triangles tie for the minimum, per configuration —
-growth of the critical set is an open question posed by Sudermann-Merx
-(arXiv:2603.11107); this is the complete census across all three variants.
-Dips below the trend usually mean under-converged coordinates rather than
-mathematics: rows whose records aren't public yet sit visibly low.</figcaption></figure>
+<figcaption>The number of triangles that simultaneously achieve the minimal area (the critical set).
+Understanding how the size of this tie set scales with n is an active open problem highlighted by
+Sudermann-Merx (arXiv:2603.11107). Occasional drops below the general upward trend typically
+indicate candidate configurations that have not yet fully converged to their highest-symmetry
+optimal tie configurations, rather than genuine structural decreases in the mathematical optimum.</figcaption></figure>
 
 <h2>State of the frontier</h2>
 <ul>

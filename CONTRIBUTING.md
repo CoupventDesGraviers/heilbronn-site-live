@@ -4,12 +4,13 @@ Found a better arrangement — or have the original coordinates for an entry
 this site only shows as a reconstruction? Submissions are plain pull
 requests, verified automatically in exact arithmetic.
 
-Most PRs to this repository are prepared by automated search pipelines and
-LLM agents, and that's expected — this document is written to be followed
-mechanically. **There is one submission lane**: `data/sources/external/`,
-for everyone, including this site's own search pipeline. (The
-`data/sources/tejsteadqc/` directory is a legacy sync lane; do not add new
-entries to it.)
+Contributions may come from human researchers, numerical solvers, or automated
+search pipelines. To ensure consistency and automated validation, all submissions
+follow a structured directory format and are verified by continuous integration
+in exact rational arithmetic before merging.
+
+**There is one submission lane**: `data/sources/external/`, for everyone,
+including this site's own search pipeline.
 
 ## What to add
 

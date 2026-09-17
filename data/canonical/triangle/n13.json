@@ -75,9 +75,9 @@
  },
  "proof": null,
  "coordinates_source": {
-  "kind": "author",
+  "kind": "external",
   "ref": "TejSteadQC/heilbronn-configurations claims/01-record-triangle-n13",
-  "note": null,
+  "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json",
   "basis": null
  },
  "coordinates_reconstructed": false,

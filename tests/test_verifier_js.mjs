@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert";
 import { createRequire } from "node:module";
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -11,10 +11,17 @@ const require = createRequire(import.meta.url);
 const here = path.dirname(fileURLToPath(import.meta.url));
 const { verify, parsePoints } = require(path.join(here, "..", "assets", "js", "verifier.js"));
 
-const srcdir = path.join(here, "..", "data", "sources", "tejsteadqc");
-const dirs = readdirSync(srcdir).filter(d => /^(square|triangle|convex)-n\d+$/.test(d));
+// Every directory carrying a verify_output.json: retired golden fixtures plus
+// live submissions.
+const roots = [path.join(here, "fixtures", "golden"),
+               path.join(here, "..", "data", "sources", "external")];
+const fixtures = roots.flatMap(root =>
+  readdirSync(root)
+    .filter(d => /^(square|triangle|convex)-n\d+/.test(d) &&
+                 existsSync(path.join(root, d, "verify_output.json")))
+    .map(d => [root, d]));
 
-for (const d of dirs) {
+for (const [srcdir, d] of fixtures) {
   test(`verifier.js matches upstream: ${d}`, () => {
     const variant = d.split("-")[0];
     const pts = parsePoints(readFileSync(path.join(srcdir, d, "coordinates.txt"), "utf8"));
