@@ -1,63 +1,69 @@
 # heilbronn-site
 
-An open archive and computational atlas for the Heilbronn triangle problem,
-served at <https://math.tejstead.com/heilbronn>.
+Best known configurations for the Heilbronn triangle problem, served at
+<https://math.tejstead.com/heilbronn>.
 
-This project continues and expands the historical records maintained for decades
-at Erich Friedman's Packing Center (offline since 2026). It provides exact coordinates,
-algebraic closed forms, symmetry and congruence visualizers, formal proof references,
-and an in-browser exact rational arithmetic verifier across squares, triangles,
-and general convex containers for n = 3 to 36.
+Place n points in a region of unit area so that the smallest triangle they
+determine is as large as possible. This site keeps the record tables for
+squares, triangles, and convex regions for n = 3 to 36, with exact
+coordinates for every entry, closed forms and minimal polynomials where
+they are known, symmetry and congruence shown on each figure, links to the
+optimality proofs, and a verifier that runs in the browser.
 
-The site is built as purely static HTML and vector SVGs with zero runtime dependencies.
-Interactive features (such as the point viewer and coordinate verifier) enhance the
-experience progressively while keeping all pages fully readable without JavaScript.
+The tables carry on from Erich Friedman's Packing Center, which went
+offline in 2026.
 
-**Have a better configuration — or the exact value for one?** See
-[CONTRIBUTING.md](CONTRIBUTING.md): submissions are plain pull requests
-(coordinates, provenance, optionally a minimal polynomial), verified
-automatically in exact arithmetic and live on the site minutes after merge.
+Everything is generated ahead of time. The server only serves static files.
+The viewer and the verifier are the only JavaScript on the site, and every
+page reads fine without it.
+
+Found a better configuration, or the exact value of one? Open a pull
+request as described in [CONTRIBUTING.md](CONTRIBUTING.md). CI verifies the
+coordinates in exact arithmetic, and the entry is live shortly after merge.
 
 ## Layout
 
-- `data/sources/` — vendored upstream inputs, each with `ATTRIBUTION.md`
-- `data/curated/` — hand-maintained record ledger (`records.json`), references, overrides
-- `data/canonical/` — the unified per-configuration JSONs (ingest output, committed)
-- `build/` — the generator: ingest → verify → derive → render → downloads → compress
-- `reconstruct/` — laptop-only optimization to recover unpublished configurations
-- `proofs/` — source-only formal proofs and external-verifier snapshots
-- `templates/`, `assets/` — jinja2 templates, CSS, vanilla JS
-- `deploy/` — Caddy site snippets + `deploy.sh` (rsync + graceful reload)
-- `landing/` — the tejstead.com apex page
+- `data/sources/` — coordinate sources, one `ATTRIBUTION.md` per directory; `external/` is the submission lane
+- `data/curated/` — the record ledger (`records.json`), references, overrides
+- `data/canonical/` — one JSON per configuration, written by ingest and committed
+- `build/` — the generator: ingest, verify, derive, render, downloads, compress
+- `search/` — the search toolkit used for the site's own records
+- `reconstruct/` — optimization to recover configurations whose coordinates were never published
+- `proofs/` — formal proofs and external-verifier snapshots
+- `scripts/` — submission checker and import helpers
+- `templates/`, `assets/` — Jinja2 templates, CSS, JavaScript
+- `tests/` — pytest and node golden tests for the two verifiers
+- `deploy/` — Caddy snippets and the deploy scripts
+- `landing/` — the tejstead.com front page
 
 ## Commands
 
 ```
 make build        # full site into dist/
-make test         # pytest + node --test golden fixtures
-make serve        # quick preview at :8080
+make test         # pytest + node --test
+make serve        # preview at :8080
 make serve-caddy  # production-identical preview at :8081
-make deploy       # build, rsync to the box, reload Caddy
+make deploy       # build, rsync to the server, reload Caddy
 ```
 
-Deploys are also continuous: every push to `main` is built by the
-`publish-site` workflow into a rolling release tarball, which the server
-pulls every 5 minutes (`deploy/site-pull.sh`, cron) — so a merged PR is
-live within ~10 minutes with no laptop involved. `make deploy` remains for
-instant manual pushes and is still required for Caddyfile changes.
+Every push to `main` is also built by the `publish-site` workflow into a
+release tarball that the server pulls every five minutes, so a merged PR is
+live within about ten minutes. `make deploy` is for immediate manual pushes
+and is still needed for Caddyfile changes.
 
 ## Data provenance
 
-Historical values, credits, and symmetry labels are facts recorded from Erich
-Friedman's Packing Center pages before they went offline, now maintained by
-hand in `data/curated/records.json`; all figures are regenerated from
-coordinates — none of his images are copied. Coordinates come from
-community submissions and this site's own search campaigns (`data/sources/external/`),
+The historical values, credits, and symmetry labels were recorded from the
+Packing Center pages before they went offline and are maintained by hand in
+`data/curated/records.json`. All figures are drawn from coordinates; none of
+Friedman's images are used. Coordinates come from community submissions and
+the site's own search campaigns (`data/sources/external/`),
 [spiralulam/heilbronn](https://github.com/spiralulam/heilbronn) (MIT),
 [google-deepmind/alphaevolve_results](https://github.com/google-deepmind/alphaevolve_results),
-published exact constructions, or local reconstruction (labeled as such).
+published exact constructions, or local reconstruction, which is labeled as
+such on the page.
 
 ## License
 
-Code is [MIT](LICENSE). Vendored data under `data/sources/` carries its own
-attribution — see the `ATTRIBUTION.md` next to each source.
+Code is [MIT](LICENSE). Data under `data/sources/` carries its own
+attribution; see the `ATTRIBUTION.md` next to each source.
