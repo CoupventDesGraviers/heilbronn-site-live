@@ -62,7 +62,7 @@ META = {
     },
 }
 
-INDEX_THUMBS = {"square": 16, "triangle": 18, "convex": 18}
+INDEX_THUMBS = {"square": 16, "triangle": 9, "convex": 18}
 
 
 def load_docs():
