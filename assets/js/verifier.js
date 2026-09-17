@@ -1,5 +1,5 @@
-// Client-side exact verifier — a port of verify_a.py from
-// TejSteadQC/heilbronn-configurations. All coordinates are decimal literals,
+// Client-side exact verifier — a port of build/vendor/verify_exact.py.
+// All coordinates are decimal literals,
 // so scaling by 10^K (K = max decimal places) turns everything into BigInt
 // integer arithmetic: cross products, hull, shoelace and the tie test are
 // exact. The only rounding is the final 30-significant-digit display.

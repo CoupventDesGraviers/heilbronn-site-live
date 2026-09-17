@@ -76,7 +76,7 @@
  "proof": null,
  "coordinates_source": {
   "kind": "external",
-  "ref": "TejSteadQC/heilbronn-configurations claims/01-record-triangle-n13",
+  "ref": "this site's search campaign claims/01-record-triangle-n13",
   "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json",
   "basis": null
  },

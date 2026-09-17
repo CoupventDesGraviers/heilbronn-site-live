@@ -1,12 +1,10 @@
-# Golden verifier fixtures
+# Golden Verifier Fixtures
 
-Configurations with dual-verified `verify_output.json` files, used by
-`tests/test_verify.py` and `tests/test_verifier_js.mjs` to check that both
-the Python and browser verifiers reproduce the upstream exact results.
+This directory contains a regression test corpus of point configurations alongside certified `verify_output.json` records. It is used by `tests/test_verify.py` and `tests/test_verifier_js.mjs` to ensure that the Python exact-rational verifier and the client-side JavaScript BigInt verifier produce identical results.
 
-Most directories came from
-[TejSteadQC/heilbronn-configurations](https://github.com/TejSteadQC/heilbronn-configurations)
-(this site's own search campaign) and were retired here once a better
-configuration reached `data/sources/external/`; `square-n21-superseded` is
-Chouaieb Nemri's AlphaEvolve submission, likewise superseded. None of these
-feed the site build.
+## Provenance & Coverage
+- **Origin**: Most fixtures come from this site's own search campaigns and were verified by two independent exact verifiers at the time they were found. They span every container and a wide range of n.
+- **Superseded Candidates**: Every fixture here was later improved upon by a newer record. Retaining superseded candidates preserves test coverage over large tie sets and near-degenerate triangles that current records may not exercise.
+
+## Build Isolation
+These fixtures exist exclusively for unit testing and CI verification. They are isolated from `data/sources/` and are not processed during the static site build or counted on the public leaderboard.

@@ -116,7 +116,7 @@
  "proof": null,
  "coordinates_source": {
   "kind": "external",
-  "ref": "TejSteadQC/heilbronn-configurations, claims batch 2026-08-21 (heilbronn-experiments pipeline)",
+  "ref": "this site's search campaign, claims batch 2026-08-21 (heilbronn-experiments pipeline)",
   "note": "stress-weighted ruin-and-recreate (architecture from cnemri's evolved program, ported to this variant) warm-started from the previous record",
   "basis": null
  },

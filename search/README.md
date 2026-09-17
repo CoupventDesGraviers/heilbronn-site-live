@@ -1,9 +1,8 @@
 # Search toolkit
 
-The record-hunting toolkit, vendored from
-[TejSteadQC/heilbronn-configurations](https://github.com/TejSteadQC/heilbronn-configurations)
-(`search/` and `verifiers/`), which remains the working repository for
-new-record campaigns. This copy makes the site repository self-contained:
+The record-hunting toolkit behind this site's own campaigns, originally
+developed in a separate companion repository that has since been retired.
+This copy makes the site repository self-contained:
 everything the site shows can be found, polished, and verified with what is
 in this tree.
 

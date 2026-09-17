@@ -52,7 +52,7 @@ Historical values, credits, and symmetry labels are facts recorded from Erich
 Friedman's Packing Center pages before they went offline, now maintained by
 hand in `data/curated/records.json`; all figures are regenerated from
 coordinates — none of his images are copied. Coordinates come from
-[TejSteadQC/heilbronn-configurations](https://github.com/TejSteadQC/heilbronn-configurations),
+community submissions and this site's own search campaigns (`data/sources/external/`),
 [spiralulam/heilbronn](https://github.com/spiralulam/heilbronn) (MIT),
 [google-deepmind/alphaevolve_results](https://github.com/google-deepmind/alphaevolve_results),
 published exact constructions, or local reconstruction (labeled as such).

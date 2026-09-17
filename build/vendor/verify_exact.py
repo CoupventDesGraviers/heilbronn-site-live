@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact verifier for Heilbronn-type point configurations.
 
-Adapted from TejSteadQC/heilbronn-configurations verifiers/verify_a.py
+Adapted from the companion search repository's verifiers/verify_a.py
 (same arithmetic, same output schema) with the core exposed as a library
 function `verify(variant, points)` so the build pipeline can call it per
 configuration. The CLI form is kept byte-compatible:

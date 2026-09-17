@@ -108,7 +108,7 @@
  "proof": null,
  "coordinates_source": {
   "kind": "external",
-  "ref": "TejSteadQC/heilbronn-configurations claims-2026-08-21/square-n21",
+  "ref": "this site's search campaign claims-2026-08-21/square-n21",
   "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json",
   "basis": null
  },

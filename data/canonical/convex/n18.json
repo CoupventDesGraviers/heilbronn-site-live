@@ -105,7 +105,7 @@
  "proof": null,
  "coordinates_source": {
   "kind": "external",
-  "ref": "TejSteadQC/heilbronn-configurations claims/03-exact-convex-n18",
+  "ref": "this site's search campaign claims/03-exact-convex-n18",
   "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json",
   "basis": null
  },

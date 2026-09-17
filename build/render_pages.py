@@ -177,7 +177,7 @@ def provenance_lines(doc, derived):
             "paper": "exact, as published in",
             "external": "by an external contributor, re-verified here",
         }.get(src["kind"], src["kind"])
-        if src["kind"] == "external" and (src.get("ref") or "").startswith("TejSteadQC/"):
+        if src["kind"] == "external" and (src.get("ref") or "").startswith("this site's search campaign"):
             kind_text = "from this site's companion repository, re-verified here"
         # ref and note flow in from source meta.json files — for the
         # "external" kind that is contributor-supplied text, and provenance
@@ -475,10 +475,9 @@ algebraic proofs are submitted via pull requests (see <a href="https://github.co
 Continuous integration computes all triangle areas in exact rational arithmetic and posts
 an automated verification report on the PR. Recent record submissions include contributions
 from Nathan Sudermann-Merx, Rhys Chappell, and Chouaieb Nemri.</li>
-<li><a href="https://github.com/TejSteadQC/heilbronn-configurations">TejSteadQC/heilbronn-configurations</a>
-— the working repository for this site's own record campaigns (n = 17…36
-across the variants and batches below that); its search toolkit is vendored
-here under <code>search/</code>.</li>
+<li><strong>This site's own search campaigns</strong> — records for
+n = 17…36 across the variants, found with the toolkit under
+<code>search/</code> and submitted through the same lane as everyone else's.</li>
 <li><a href="https://github.com/cnemri/heilbronn-alphaevolve">cnemri/heilbronn-alphaevolve</a>
 — Chouaieb Nemri's AlphaEvolve-evolved search program (square n = 17, 21, 22
 records); the evolved program's architecture also powers several of the later

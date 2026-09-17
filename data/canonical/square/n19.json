@@ -100,7 +100,7 @@
  "proof": null,
  "coordinates_source": {
   "kind": "external",
-  "ref": "TejSteadQC/heilbronn-configurations, claims batch 2026-08-21 (heilbronn-experiments pipeline)",
+  "ref": "this site's search campaign, claims batch 2026-08-21 (heilbronn-experiments pipeline)",
   "note": "found with the search program evolved by cnemri (heilbronn-alphaevolve), finished with a trust-region SLP polisher; part of the 2026-08-21 batch",
   "basis": null
  },

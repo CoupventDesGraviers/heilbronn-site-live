@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Vendor upstream coordinate sources into data/sources/.
 
-- TejSteadQC/heilbronn-configurations: scan every claims*/ directory, verify
+- companion search repository (retired): scan every claims*/ directory, verify
   the dual verifier outputs agree, and keep the BEST configuration per
   (variant, n) by exact value, written into the ordinary submission lane
   data/sources/external/ (never replacing a better entry already there).
@@ -95,7 +95,7 @@ def sync_tejsteadqc(repo):
         shutil.copy(d / "coordinates.txt", dest / "coordinates.txt")
         shutil.copy(d / "verify_output.json", dest / "verify_output.json")
         (dest / "meta.json").write_text(json.dumps({
-            "ref": f"TejSteadQC/heilbronn-configurations {origin}",
+            "ref": f"this site's search campaign, {origin}",
             "credit": "Tej Stead",
             "note": "this site's own search campaign (companion repository); "
                     "dual-verified upstream, see verify_output.json",
@@ -140,15 +140,14 @@ def sync_alphaevolve(tejsteadqc_repo):
         "June 2025 (arXiv:2506.13131); coordinates from\n"
         "[google-deepmind/alphaevolve_results]"
         "(https://github.com/google-deepmind/alphaevolve_results)\n"
-        "(`mathematical_results.ipynb`), via the mirror in\n"
-        "TejSteadQC/heilbronn-configurations.\n")
+        "(`mathematical_results.ipynb`).\n")
     print(f"alphaevolve: {count} files vendored")
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tejsteadqc", required=True, type=pathlib.Path,
-                    help="local clone of TejSteadQC/heilbronn-configurations")
+                    help="local clone of the retired companion search repository")
     ap.add_argument("--spiralulam", type=pathlib.Path,
                     help="local clone of spiralulam/heilbronn (skip if absent)")
     args = ap.parse_args()

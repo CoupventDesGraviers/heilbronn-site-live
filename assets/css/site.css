@@ -80,7 +80,6 @@ code {
 .index-figs a:hover img { opacity: .8; }
 .fig-title { display: block; font-weight: 700; font-size: 1.02rem; }
 .fig-title::after { content: " →"; color: var(--accent); }
-.fig-blurb { display: block; color: var(--muted); font-size: .85rem; margin-top: .1rem; }
 
 /* Variant pages — classic entry rows: numeral · figure · text */
 .entries { margin-top: 1.5rem; }
