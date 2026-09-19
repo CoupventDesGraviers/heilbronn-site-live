@@ -1,8 +1,8 @@
 """Golden tests: the vendored verifier must reproduce the dual-verifier
 outputs committed alongside coordinates, byte-for-byte on the exact fields.
-Fixtures are every directory carrying a verify_output.json, under
-tests/fixtures/golden/ (superseded configurations kept for testing) and
-data/sources/external/ (live submissions)."""
+Fixtures live under tests/fixtures/golden/ only: submission directories
+get overwritten by better coordinates, so a verify_output.json must never sit
+next to live data."""
 
 import json
 import pathlib
@@ -15,8 +15,7 @@ SOURCES = pathlib.Path(__file__).resolve().parent.parent / "data" / "sources"
 
 GOLDEN = pathlib.Path(__file__).resolve().parent / "fixtures" / "golden"
 
-FIXTURES = sorted(d for root in (GOLDEN, SOURCES / "external")
-                  for d in root.iterdir()
+FIXTURES = sorted(d for d in GOLDEN.iterdir()
                   if d.is_dir() and (d / "verify_output.json").exists())
 
 

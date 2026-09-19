@@ -228,7 +228,7 @@ def check_dir(dirpath, base=None):
     check_meta(dirpath / "meta.json", problems, warnings, meta_keys_for(dirpath))
     for extra in sorted(p.name for p in dirpath.iterdir()
                         if p.name not in ("coordinates.txt", "meta.json",
-                                          "exact.json", "verify_output.json")):
+                                          "exact.json")):
         warnings.append(f"unexpected file `{extra}` (only coordinates.txt and "
                         "meta.json are read)")
     if points is None:

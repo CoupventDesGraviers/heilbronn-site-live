@@ -11,10 +11,9 @@ const require = createRequire(import.meta.url);
 const here = path.dirname(fileURLToPath(import.meta.url));
 const { verify, parsePoints } = require(path.join(here, "..", "assets", "js", "verifier.js"));
 
-// Every directory carrying a verify_output.json: retired golden fixtures plus
-// live submissions.
-const roots = [path.join(here, "fixtures", "golden"),
-               path.join(here, "..", "data", "sources", "external")];
+// Golden fixtures only; submission directories get overwritten by better
+// coordinates, so verify_output.json files never live next to live data.
+const roots = [path.join(here, "fixtures", "golden")];
 const fixtures = roots.flatMap(root =>
   readdirSync(root)
     .filter(d => /^(square|triangle|convex)-n\d+/.test(d) &&
