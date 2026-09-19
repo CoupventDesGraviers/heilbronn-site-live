@@ -1,5 +1,5 @@
 {
- "ref": "Original full-precision coordinates of Nathan Sudermann-Merx's August 2026 record submissions",
- "credit": "Nathan Sudermann-Merx, August 2026",
- "note": "orbit-seeded searcher (LP relocation, min-norm ascent), finished by sign-fixed cell QCP and equal-critical-area continuation"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "2-fold dihedral symmetric; 48 tied minimal triangles"
 }

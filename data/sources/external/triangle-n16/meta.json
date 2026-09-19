@@ -1,5 +1,5 @@
 {
- "ref": "David Cantrell's original coordinates (Mathematica list), received September 2026",
- "credit": "David Cantrell, June 2007",
- "note": "Original author's arrangement for the entry, previously shown only as a reconstruction; Cantrell's literals converge to the same configuration under local polishing, and the literals here are that arrangement tightened to 15 decimals."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 24 tied minimal triangles"
 }

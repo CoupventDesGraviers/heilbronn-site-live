@@ -1,5 +1,5 @@
 {
- "ref": "heilbronn-site reconstruct/reconstruct.py \u2014 re-polish of the triangle n=17 record figure",
- "credit": "Tej Stead, September 2026",
- "note": "Sudermann-Merx's August 2026 arrangement re-polished to convergence: 0.0155336750 against 0.0155311479 for his submitted coordinates (+0.016%), 29 tied minimal triples (his coordinates: 26)."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 28 tied minimal triangles"
 }

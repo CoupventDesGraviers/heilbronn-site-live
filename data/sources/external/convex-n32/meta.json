@@ -1,5 +1,5 @@
 {
- "ref": "heilbronn-site search/ — cross-variant transfer, square record scored as convex",
- "credit": "Tej Stead, September 2026",
- "note": "Found by noticing that the square n=32 record puts only eight of its 32 points on the boundary, so its convex hull is an octagon of area 0.994 and it scores 0.53% above the previous convex record once divided by hull area. The coordinates are those of the square record, D4 symmetric, and turn out to be rigid in the free frame as well: 64 tied minimal triangles against 58 degrees of freedom, and trust-region polish and basin hopping under the convex objective find no improvement. n=32 is the only n where this transfer wins."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "2-fold dihedral symmetric; 56 tied minimal triangles"
 }

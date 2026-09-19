@@ -1,5 +1,5 @@
 {
- "ref": "Heilbronn triangle toolkit: derived from the D3-symmetric n=30 configuration by deleting one point, then epigraph SLSQP polishing in full dimension; refined to 120 digits by damped Gauss-Newton",
- "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
- "note": "No exact symmetry (one point removed from the D3 n=30 configuration, then polished; approximately mirror symmetric); two points on each side; 52 minimal triangles for 58 coordinates, not rigid (2 free directions), so likely improvable"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 52 tied minimal triangles"
 }

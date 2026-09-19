@@ -1,5 +1,5 @@
 {
- "ref": "autoheilbronn v6 campaign; two independent exact rational verifiers",
- "credit": "Rhys Chappell, September 2026",
- "note": "Basin exploration with triangle-orientation changes and point reinsertion, followed by trust-region linear programming."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 58 tied minimal triangles"
 }

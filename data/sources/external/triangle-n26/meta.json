@@ -1,5 +1,5 @@
 {
- "ref": "Heilbronn triangle toolkit (search_hop_tri.py): full-dimension basin hopping on subsets of points, chains seeded by one-point deletions of our D3-symmetric n=27 configuration, with elite restarts from distinct optima; refined to 120 digits by Gauss-Newton",
- "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
- "note": "No symmetry; two points on each side, no vertex; 47 minimal triangles, rigid (Jacobian of full rank 47 after pinning the six boundary coordinates)"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 48 tied minimal triangles"
 }

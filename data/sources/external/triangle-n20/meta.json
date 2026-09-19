@@ -1,5 +1,5 @@
 {
- "ref": "autoheilbronn v4 topology/annealing campaign; exact rational verification",
- "credit": "Rhys Chappell, September 2026",
- "note": "Line-arrangement-guided insertion and stress-weighted ruin/recreate, followed by filtered trust-region SLP polishing; GPU annealing was also used where recorded in the result provenance."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 34 tied minimal triangles"
 }

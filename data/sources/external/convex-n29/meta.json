@@ -1,5 +1,5 @@
 {
- "ref": "spiralulam heilbronn_square/csearch pipeline, ruin-and-recreate pass 2026-08-25",
- "credit": "Nathan Sudermann-Merx, August 2026",
- "note": "stress-weighted ruin and recreate at fixed n with insertion scored by the ratio, refined with the Dinkelbach trust-region SLP"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 52 tied minimal triangles"
 }

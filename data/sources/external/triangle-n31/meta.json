@@ -1,5 +1,5 @@
 {
- "ref": "Heilbronn triangle toolkit, D3-symmetric multistart + orbit-subset basin hopping over a C-kernel orbit-reduced evaluator (orbit decomposition free^5 + centroid, dimension 10); refined to 120 digits by Gauss-Newton in the symmetry-reduced space",
- "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
- "note": "D3 symmetric, two points on each side, no vertex; 57 minimal triangles, rigid in the symmetry-reduced space (Jacobian of full rank 10)"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "3-fold rotationally symmetric; 57 tied minimal triangles"
 }

@@ -1,5 +1,5 @@
 {
- "ref": "heilbronn-site structured search (overnight 2026-09-13): relocate point 7, seeded from the triangle n=32 record",
- "credit": "Tej Stead, September 2026",
- "note": "Found by relocate point 7 applied to the triangle n=32 record (Rhys Chappell, September 2026), then re-polished to convergence; 59 tied minimal triples. Improves the previous value by 0.131%."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric; 59 tied minimal triangles"
 }

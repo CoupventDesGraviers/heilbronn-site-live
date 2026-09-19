@@ -1,5 +1,5 @@
 {
- "ref": "heilbronn-site structured search (overnight 2026-09-13): relocate point 23, seeded from the convex n=34 record",
- "credit": "Tej Stead, September 2026",
- "note": "Found by relocate point 23 applied to the convex n=34 record (Rhys Chappell, September 2026), then re-polished to convergence; 61 tied minimal triples. Improves the previous value by 0.541%."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, greedy ruin-and-recreate, soft-min warm-up, trust-region SLP) and insertion ladders from neighbouring records; tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "2-fold dihedral symmetric; 62 tied minimal triangles"
 }
