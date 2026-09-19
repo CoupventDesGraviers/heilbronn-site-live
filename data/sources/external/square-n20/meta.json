@@ -1,5 +1,5 @@
 {
- "ref": "this site's search campaign claims/07-extension-square-n20",
- "credit": "Tej Stead",
- "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, ruin-and-recreate, soft-min L-BFGS warm-up, trust-region SLP polish); tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "D2 symmetric (both axis-parallel mirrors, one point pair on each axis), 42 tied minimal triangles; found by D2-restricted basin hopping"
 }

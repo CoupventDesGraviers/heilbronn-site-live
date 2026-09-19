@@ -1,5 +1,5 @@
 {
- "ref": "Heilbronn toolkit, D4 multistart over a C-kernel orbit-reduced triangle evaluator (decomposition libre^4 + adiag, dimension 9), 4.6e7 restarts; refined to 600 digits by Gauss-Newton in the symmetry-reduced space",
- "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
- "note": "D4 symmetric, eight boundary points (two per side); 72 critical triangles for 64 degrees of freedom, so the configuration is rigid"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, ruin-and-recreate, soft-min L-BFGS warm-up, trust-region SLP polish); tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric, 65 tied minimal triangles; insertion ladder from the 35-point configuration (+1 point, asymmetric basin hopping)"
 }

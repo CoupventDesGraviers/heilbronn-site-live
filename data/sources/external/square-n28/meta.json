@@ -1,5 +1,5 @@
 {
- "ref": "this site's search campaign claims-2026-07-25/square-n28",
- "credit": "Tej Stead",
- "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, ruin-and-recreate, soft-min L-BFGS warm-up, trust-region SLP polish); tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "C4 (90-degree rotational) symmetric, no mirrors; 52 tied minimal triangles. Found by C4-restricted basin hopping."
 }

@@ -1,5 +1,5 @@
 {
- "ref": "this site's search campaign claims-2026-08-21/square-n21",
- "credit": "Tej Stead, August 2026",
- "note": "this site's own search campaign (companion repository); dual-verified upstream, see verify_output.json"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, ruin-and-recreate, soft-min L-BFGS warm-up, trust-region SLP polish); tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "not symmetric, 36 tied minimal triangles; diagonal-mirror-restricted search, then asymmetric basin hopping seeded from the 22-point configuration minus one point"
 }

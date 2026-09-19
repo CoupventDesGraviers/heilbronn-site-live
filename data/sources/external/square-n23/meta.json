@@ -1,5 +1,5 @@
 {
- "ref": "heilbronn-site search/refine.py \u2014 square n=24 record minus one point, re-polished",
- "credit": "Tej Stead, September 2026",
- "note": "Ilkyoo Choi's n=24 configuration with one point deleted and re-polished. Removing a point cannot lower the minimum area, and the n=24 value sat only 1% below the n=23 record."
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, ruin-and-recreate, soft-min L-BFGS warm-up, trust-region SLP polish); tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "mirror symmetric about x = 1/2 (one point on the axis), 39 tied minimal triangles; found by mirror-restricted basin hopping"
 }

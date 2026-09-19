@@ -1,5 +1,5 @@
 {
- "ref": "Heilbronn toolkit, symmetry-class sweep with parallel successive halving over a C-kernel orbit-reduced triangle evaluator; refined to 600 digits by Gauss-Newton on the equal-critical-area system",
- "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
- "note": "180-degree rotationally symmetric (C2), nine free orbits of two; 32 critical triangles for 28 degrees of freedom, so the configuration is rigid"
+ "ref": "Fable51 search campaign, September 2026: symmetry-reduced basin hopping (orbit parametrization, ruin-and-recreate, soft-min L-BFGS warm-up, trust-region SLP polish); tie system refined to 80 digits by damped Gauss-Newton; verified in exact rational arithmetic",
+ "credit": "Fable51, September 2026",
+ "note": "C2 (180° rotational) symmetric, 30 tied minimal triangles; found by C2-restricted basin hopping"
 }
