@@ -61,11 +61,30 @@ def load_curated(name):
 
 def frac_to_dec(fr):
     """Exact decimal string for a Fraction with 10-smooth denominator (all
-    source coordinates are decimal literals, so this always applies)."""
-    from decimal import Decimal
-    d = Decimal(fr.numerator) / Decimal(fr.denominator)
-    s = format(d.normalize(), "f")
-    return s
+    source coordinates are decimal literals, so this always applies).
+    Integer arithmetic throughout: Decimal division would round to the
+    context precision (28 digits) and silently perturb 30-digit literals."""
+    num, den = fr.numerator, fr.denominator
+    k = 0
+    while den % 10 == 0:
+        den //= 10
+        k += 1
+    while den % 2 == 0:
+        den //= 2
+        num *= 5
+        k += 1
+    while den % 5 == 0:
+        den //= 5
+        num *= 2
+        k += 1
+    if den != 1:
+        raise ValueError(f"denominator of {fr} is not 10-smooth")
+    sign = "-" if num < 0 else ""
+    digits = str(abs(num)).rjust(k + 1, "0")
+    if k == 0:
+        return sign + digits
+    s = sign + digits[:-k] + "." + digits[-k:]
+    return s.rstrip("0").rstrip(".") if "." in s else s
 
 
 def points_to_strings(points):
