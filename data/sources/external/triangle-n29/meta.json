@@ -1,5 +1,5 @@
 {
- "ref": "one-point deletion from the D3-symmetric triangle n=30 record, polished by trust-region successive linear programming",
- "credit": "Fable 5.1 with Shengtong Zhang, September 2026",
- "note": "Three symmetry-related deletions of the n=30 record polish to the same value. 53 triangles tie at the minimum."
+ "ref": "One-point deletion from the n=30 record, refined to 120 digits by Gauss-Newton",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "No symmetry; obtained by deleting one point of the n=30 record (Fable 5.1 with Shengtong Zhang): two points on each side, 53 minimal triangles, rigid (rank 53/53)."
 }
