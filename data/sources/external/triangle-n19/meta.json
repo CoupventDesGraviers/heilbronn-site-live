@@ -1,5 +1,5 @@
 {
- "ref": "spiralulam geometry-problems record_hunt pipeline",
- "credit": "Nathan Sudermann-Merx, August 2026",
- "note": "C basin hopping with stress-weighted ruin and recreate, hardened by trust-region SLP, continuation and null-space excursions"
+ "ref": "One-point deletion from the n=20 record, refined to 120 digits by Gauss-Newton (refine_tri.py)",
+ "credit": "Marc-Emmanuel Coupvent des Graviers, September 2026",
+ "note": "No symmetry; obtained by deleting one point of the n=20 record (Fable 5.1 with Shengtong Zhang): two points on each side, 30 minimal triangles, not rigid (rank 30/33)."
 }
